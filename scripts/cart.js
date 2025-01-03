@@ -54,16 +54,16 @@ function placeOrder() {
     }
 
     // Clear the cart
-    localStorage.removeItem("cart");
+    // localStorage.removeItem("cart");
 
     // Confirmation message
-    alert("Thank you for your order!");
+    alert("Thank you for your order! Redirecting to payment page..");
 
     // Reload the cart view
     loadCart();
 
     // Optional: Redirect to a confirmation page
-    // window.location.href = "confirmation.html";
+    window.location.href = "payment.html";
 }
 
 // Attach the place order event
