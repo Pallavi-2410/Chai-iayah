@@ -21,7 +21,7 @@ function addToCart(comboName) {
         cart.push({
             name: comboName,
             price: combos[comboName].price,
-            description: combos[comboName].description,
+            // description: combos[comboName].description,
         });
     }
 

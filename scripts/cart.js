@@ -11,13 +11,14 @@ function loadCart() {
 
     // Populate cart items
     cart.forEach((item, index) => {
-        totalPrice += item.price;
+        const price = parseFloat(item.price);
+        totalPrice += price;
 
         const cartItem = document.createElement("div");
         cartItem.classList.add("cart-item");
         cartItem.innerHTML = `
-                    <span><strong>${item.name}</strong> - ${item.description}</span>
-                    <span>$${item.price}</span>
+                    <span><strong>${item.name}</strong>                   
+                    <span> &#8377; ${item.price}</span>
                     <button onclick="removeFromCart(${index})">Remove</button>
                 `;
         cartContainer.appendChild(cartItem);
@@ -43,3 +44,41 @@ function removeFromCart(index) {
 
 // Load cart items on page load
 loadCart();
+
+// Place Order functionality
+function placeOrder() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+        alert("Your cart is empty! Add items before placing an order.");
+        return;
+    }
+
+    // Clear the cart
+    localStorage.removeItem("cart");
+
+    // Confirmation message
+    alert("Thank you for your order!");
+
+    // Reload the cart view
+    loadCart();
+
+    // Optional: Redirect to a confirmation page
+    // window.location.href = "confirmation.html";
+}
+
+// Attach the place order event
+document.getElementById("place-order").addEventListener("click", placeOrder);
+
+// Load cart items on page load
+document.addEventListener("DOMContentLoaded", loadCart);
+
+
+
+document.querySelectorAll('.submenu a').forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();
+        
+        // Redirect to the next page
+        window.location.href = 'secondPage.html';
+    });
+});

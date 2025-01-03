@@ -1,53 +1,82 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #fafafa;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
-header {
-    background-color: #6d4c41;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+
 
 main {
-    padding: 20px;
+    padding: 50px;
 }
 
-.cart-item {
+#cart-container {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid; */
+}
+.cart-item span {
+    /* border: 1px solid; */
+    width: 100%;
     display: flex;
+    gap: 10px;
     justify-content: space-between;
-    padding: 15px;
-    background-color: #fff;
+    align-items: center;
+}
+.cart-item>span>span {
+/* border: 1px solid; */
+    width: 80px;
+    margin-left: auto;
+}
+.cart-item {    
     margin: 10px 0;
-    border: 1px solid #ddd;
+    padding: 15px;
     border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* border: 1px solid; */
+    /* position: relative; */
+}
+
+.cart-item:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cart-item button {
-    background-color: #d9534f;
+    margin-left: auto;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 50px;
     color: white;
+    background-color: #e2544f;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
 }
-
 .cart-item button:hover {
     background-color: #c9302c;
 }
-
-footer {
+.total, #place-order {
     text-align: center;
-    background-color: #4e342e;
-    color: white;
-    padding: 10px;
-}
-
-.total {
-    text-align: right;
-    font-size: 1.2em;
+    font-size: 1.2em;    
+    /* border: 1px solid; */
+    padding: 15px 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    max-width: 800px;
+    margin: auto;
     margin-top: 20px;
+}
+#place-order {
+    color: white;
+    background-color: #896646;
+    cursor: pointer;
+}
+#place-order:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #a9825a;
 }
