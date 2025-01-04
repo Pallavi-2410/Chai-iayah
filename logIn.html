@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+
+<body>
+    <div class="blackScreen"></div>
+    <div style="
+        position: absolute;
+        top: 60px;
+        left: 37%;
+        border-radius: 8px;
+        width: 400px; height: 600px; background-image: url('./Image_files/Main_image/LogInImg1.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;
+        z-index: -1;"
+        class="loginImg"></div>
+
+    <div id="formContainer">
+
+        <h3>Login or SignUp</h3>
+        <form id="fromDetails">
+            <input id="email" type="email" placeholder="Enter your Email">
+            <br>
+            <input id="password" type="text" placeholder="Password">
+            <h6>By continuing, I agree to the <span>Terms & Privacy Policy</span> </h6>
+            <h2 id="continueBtn">Continue</h2>
+            <h6>Have trouble logging in? <span>Get Help</span></h6>
+        </form>
+    </div>
+</body>
+<script src="./scripts/logIn.js"></script>
+</html>
