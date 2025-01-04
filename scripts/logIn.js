@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             // Redirect to signup page if user doesn't exist
             alert('User not found. Redirecting to signup...');
-            window.location.href = 'signup.html';
+            window.location.href = 'signUp.html';
         }
     });
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./styles/home.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
@@ -26,7 +26,7 @@
             <li>
                 <a href="#">Sign In</a>
                 <ul class="submenu">
-                    <li><a href="#">Create an Account</a></li>
+                    <li><a id="signUp" href="">Sign Up / Log In</a></li>
                     <hr>
                     <li><a href="#">My Account</a></li>
                     <li><a href="#">My Orders</a></li>
@@ -176,42 +176,43 @@
             <button class="prev-btn">&#8249;</button>
             <div id="mainCard">
                 <div class="card">
-                    <img src="./Image_files/Tea/Ginger-Cinnamon.jpg" alt="ginerTea">
+                    <img data-name="Adrak vali Chai" data-price="50" data-image="./Image_files/Tea/Ginger-Cinnamon.jpg" src="./Image_files/Tea/Ginger-Cinnamon.jpg" alt="ginerTea">
                     <h4>Adrak vali Chai</h4>
                     <p>Price: &#8377; 50 </p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/Kashmiri_kahwa.jpg" alt="kashmiriKahwa">
+                    <img data-name="Kashmiri Kahwa" data-price="45" data-image="./Image_files/Tea/Kashmiri_kahwa.jpg" src="./Image_files/Tea/Kashmiri_kahwa.jpg" alt="kashmiriKahwa">
                     <h4>Kashmiri Kahwa</h4>
                     <p>Price: &#8377; 45</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/Irani_tea.jpg" alt="itaniTea">
+                    <img data-name="Irani Chai" data-price="55" data-image="./Image_files/Tea/Irani_tea.jpg" src="./Image_files/Tea/Irani_tea.jpg" alt="itaniTea">
                     <h4>Irani Chai</h4>
                     <p>Price: &#8377; 55</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/Green_tea.jpg" alt="greenTea">
+                    <img data-name="Green Tea" data-price="40" data-image="./Image_files/Tea/Green_tea.jpg" src="./Image_files/Tea/Green_tea.jpg" alt="greenTea">
                     <h4>Green Tea</h4>
                     <p>Price: &#8377; 40</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/ButterFly_pea_tea.jpg" alt="ButterFly_pea_tea">
+                    <img data-name="ButterFly Pea Chai" data-price="70"
+                        data-image="./Image_files/Tea/ButterFly_pea_tea.jpg" src="./Image_files/Tea/ButterFly_pea_tea.jpg" alt="ButterFly_pea_tea">
                     <h4>ButterFly Pea Chai</h4>
                     <p>Price: &#8377; 70</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/Butter_tea1.jpg" alt="butterTea">
+                    <img data-name="Chai - Makhan maar ke" data-price="50" data-image="./Image_files/Tea/Butter_tea1.jpg" src="./Image_files/Tea/Butter_tea1.jpg" alt="butterTea">
                     <h4>Chai - Makhan maar ke</h4>
                     <p>Price: &#8377; 50</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/Kesar_tea.jpg" alt="kesarTea">
+                    <img data-name="Kesar Chai" data-price="80" data-image="./Image_files/Tea/Kesar_tea.jpg" src="./Image_files/Tea/Kesar_tea.jpg" alt="kesarTea">
                     <h4>Kesar Chai</h4>
                     <p>Price: &#8377; 80</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Tea/Tulsi_tea.jpg" alt="tulsiTea">
+                    <img data-name="Tulsi Chai" data-price="40" data-image="./Image_files/Tea/Tulsi_tea.jpg" src="./Image_files/Tea/Tulsi_tea.jpg" alt="tulsiTea">
                     <h4>Tulsi Chai</h4>
                     <p>Price: &#8377; 40</p>
                 </div>
@@ -240,42 +241,43 @@
             <button class="prev-btn">&#8249;</button>
             <div id="mainCard">
                 <div class="card">
-                    <img src="./Image_files/Coffee/Americano_coffee.jpg" alt="Americano">
+                    <img data-name="Americano" data-price="80" data-image="./Image_files/Coffee/Americano_coffee.jpg" src="./Image_files/Coffee/Americano_coffee.jpg" alt="Americano">
                     <h4>Americano</h4>
                     <p>Price: &#8377; 80</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Iced Coffee.jpg" alt="Icedcoffee">
+                    <img data-name="Iced Coffee" data-price="70" data-image="./Image_files/Coffee/Iced Coffee.jpg" src="./Image_files/Coffee/Iced Coffee.jpg" alt="Icedcoffee">
                     <h4>Iced Coffee</h4>
                     <p>Price: &#8377; 70</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Caffe Macchiato .jpg" alt="caffemacchiato">
+                    <img data-name="Caffe Macchiato" data-price="90"
+                        data-image="./Image_files/Coffee/Caffe Macchiato .jpg" src="./Image_files/Coffee/Caffe Macchiato .jpg" alt="caffemacchiato">
                     <h4>Caffe Macchiato</h4>
                     <p>Price: &#8377; 90</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Caffe mocha.jpg" alt="caffe Mocha">
+                    <img data-name="Caffe mocha" data-price="120" data-image="./Image_files/Coffee/Caffe mocha.jpg" src="./Image_files/Coffee/Caffe mocha.jpg" alt="caffe Mocha">
                     <h4>Caffe Mocha</h4>
                     <p>Price: &#8377; 120</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Cortado1.jpg" alt="cortado">
+                    <img data-name="Cortado" data-price="150" data-image="./Image_files/Coffee/Cortado1.jpg" src="./Image_files/Coffee/Cortado1.jpg" alt="cortado">
                     <h4>Cortado</h4>
                     <p>Price: &#8377; 150</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Frappe.jpg" alt="Frappe">
+                    <img data-name="Frappe" data-price="100" data-image="./Image_files/Coffee/Frappe.jpg" src="./Image_files/Coffee/Frappe.jpg" alt="Frappe">
                     <h4>Frappe</h4>
                     <p>Price: &#8377; 100</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Espresso.jpg" alt="Espresso">
+                    <img data-name="Espresso" data-price="100" data-image="./Image_files/Coffee/Espresso.jpg" src="./Image_files/Coffee/Espresso.jpg" alt="Espresso">
                     <h4>Espresso</h4>
                     <p>Price: &#8377; 100</p>
                 </div>
                 <div class="card">
-                    <img src="./Image_files/Coffee/Latte.jpg" alt="Latte">
+                    <img data-name="Latte" data-price="100" data-image="./Image_files/Coffee/Latte.jpg" src="./Image_files/Coffee/Latte.jpg" alt="Latte">
                     <h4>Latte</h4>
                     <p>Price: &#8377; 100</p>
                 </div>
@@ -300,43 +302,47 @@
 
     <div id="index">
         <h3>Your ever-loyal companion - with Chai and Coffee</h3>
-
+        <div class="carousel-container">
+            <button class="prev-btn">&#8249;</button>
         <div id="mainCard">
             <div class="card">
-                <img src="./Image_files/Nashta/Poha.jpg" alt="poha">
+                <img data-name="Poha" data-price="40" data-image="./Image_files/Nashta/Poha.jpg" src="./Image_files/Nashta/Poha.jpg" alt="poha">
                 <h4>Poha</h4>
                 <p>Price: &#8377; 40</p>
             </div>
             <div class="card">
-                <img src="./Image_files/Nashta/Aalu Paratha.jpg" alt="aalu Paratha">
+                <img data-name="Aalu Paratha" data-price="20" data-image="./Image_files/Nashta/Aalu Paratha.jpg" src="./Image_files/Nashta/Aalu Paratha.jpg" alt="aalu Paratha">
                 <h4>Aalu Paratha</h4>
                 <p>Price: &#8377; 20</p>
             </div>
             <div class="card">
-                <img src="./Image_files/Nashta/DahiKachori.jpg" alt="Dahi Kachori">
+                <img data-name="Dahi Kachori" data-price="60" data-image="./Image_files/Nashta/DahiKachori.jpg" src="./Image_files/Nashta/DahiKachori.jpg" alt="Dahi Kachori">
                 <h4>Dahi Kachori</h4>
                 <p>Price: &#8377; 60</p>
             </div>
             <div class="card">
-                <img src="./Image_files/Nashta/Dosa.jpg" alt="Dosa">
+                <img data-name="Dosa" data-price="30" data-image="./Image_files/Nashta/Dosa.jpg" src="./Image_files/Nashta/Dosa.jpg" alt="Dosa">
                 <h4>Dosa</h4>
                 <p>Price: &#8377; 30</p>
             </div>
             <div class="card">
-                <img src="./Image_files/Nashta/Rawa Idli.jpg" alt="Idli">
+                <img data-name="Idli" data-price="10" data-image="./Image_files/Nashta/Rawa Idli.jpg" src="./Image_files/Nashta/Rawa Idli.jpg" alt="Idli">
                 <h4>Idli</h4>
                 <p>Price: &#8377; 10</p>
             </div>
             <div class="card">
-                <img src="./Image_files/Nashta/Sabudana Khichdi.jpg" alt="Sabudana Khichdi">
+                <img data-name="Sabudana Khichdi" data-price="35"
+                        data-image="./Image_files/Nashta/Sabudana Khichdi.jpg" src="./Image_files/Nashta/Sabudana Khichdi.jpg" alt="Sabudana Khichdi">
                 <h4>Sabudana Khichdi</h4>
                 <p>Price: &#8377; 35</p>
             </div>
             <div class="card">
-                <img src="./Image_files/Nashta/Samosa.jpg" alt="Samosa">
+                <img data-name="Samosa" data-price="12" data-image="./Image_files/Nashta/Samosa.jpg" src="./Image_files/Nashta/Samosa.jpg" alt="Samosa">
                 <h4>Samosa</h4>
                 <p>Price: &#8377; 12</p>
             </div>
+        </div>
+        <button class="next-btn">&#8250;</button>
         </div>
     </div>
 
