@@ -19,28 +19,18 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* border: 1px solid; */
 }
-.cart-item span {
-    /* border: 1px solid; */
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-}
-.cart-item>span>span {
-/* border: 1px solid; */
-    display: inline;
-    width: 80px;
-    margin-left: auto;
-}
+
 .cart-item {    
-    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 40px;
+    justify-content: space-around;
+    align-items: center;
     margin: 10px 0;
     padding: 15px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border: 1px solid;
+    /* border: 1px solid; */
     /* position: relative; */
 }
 

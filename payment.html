@@ -14,18 +14,19 @@
     <!-- navbar -->
     <div id="navbar">
         <a href="./index.html"><img src="./Image_files/Logo/Chai_logo1.png" alt="Chai_logo"></a>
-
-        <form id="searchForm" action="/search" method="GET">
+    
+        <form id="searchForm">
             <div class="search-box">
                 <i class="fas fa-search search-icon"></i>
-                <input id="searchInput" type="text" name="query" placeholder="Find your Love - for Food" required>
+                <input id="searchInput" type="text" placeholder="Find your Love - for Food" required>
             </div>
             <div id="results"></div>
         </form>
+    
         <div class="userCart">
             <i class="fas fa-user"></i>
-            <li>
-                <a href="#">Sign In</a>
+            <li id="user-menu">
+                <a id="signInLink" href="#">Sign In</a>
                 <ul class="submenu">
                     <li><a id="signUp" href="">Sign Up / Log In</a></li>
                     <hr>
@@ -46,6 +47,7 @@
             <i class="fas fa-shopping-cart"></i>
             <a href="./cart.html">Cart</a>
         </div>
+    
     </div>
     <hr>
 
@@ -262,5 +264,5 @@
     </footer>
 </body>
 <script src="./scripts/payment.js"></script>
-
+<script src="./scripts/index.js"></script>
 </html>

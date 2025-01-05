@@ -1,6 +1,7 @@
 // Fetch item details from localStorage
 document.addEventListener('DOMContentLoaded', () => {
         const selectedItem = JSON.parse(localStorage.getItem('selectedItem'));
+        // console.log(selectedItem)
     // Update the page with item details
     if (selectedItem) {
         document.getElementById('item-image').src = selectedItem.image;

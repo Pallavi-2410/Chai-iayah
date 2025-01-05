@@ -31,44 +31,15 @@
 .userCart a:hover {
     color: #896646;
 }
-
+#user-menu span {
+    /* border: 1px solid black; */
+    /* border-bottom: #896646; */
+    padding: 20px 0px;
+}
 #navbar img {
     width: 180px;
 }
 
-
-/* search-box */
-.search-box {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 8px;
-}
-
-.search-icon {
-    margin-right: 8px;
-    color: #888;
-}
-
-#results {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    max-width: 400px;
-    background-color: #f9f9f9;
-}
-
-.result-item {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-}
-
-.result-item:last-child {
-    border-bottom: none;
-}
-/* 
 .search-box {
     position: relative;
     width: 700px;
@@ -112,7 +83,7 @@
 
 #results li:hover {
     background-color: #f0f0f0;
-} */
+} 
 
                                     /* menu */
 .menu {
@@ -139,6 +110,7 @@
 .menu>li:hover>a,
 .userCart>li:hover>a {
     color: #896646;
+    padding-bottom: 5px;
     border-bottom: 2px solid #896646;
 }
 
@@ -163,12 +135,12 @@
     outline: 2px solid #896646;
 
 }
-
 .submenu li {
     margin: 0;
 }
 
 .submenu li a {
+    /* border: 1px solid black; */
     display: block;
     padding: 5px 15px;
     text-decoration: none;
@@ -254,43 +226,50 @@
 
                             /*Index */
 
-.index h3 {
+.index h3, .index1 h3, .index2 h3 {
     font-weight: bold;
     font-size: 22px;
     padding: 10px;
     margin-top: -30px;
 }
 
-.index {
+.index, .index1, .index2 {
     margin: 30px;
     padding: 30px;
 }
 
-.carousel-container {
+.carousel-container, .carousel-container1, .carousel-container2 {
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
     width: 100%;
     gap: 10px;
-    /* border: 1px solid; */
+    /* border: 1px solid red; */
     margin: auto;
 }
-.mainCard {
+.mainCard, .mainCard1, .mainCard2 {
     display: flex;
     gap: 20px;
     /* overflow: hidden; */
     transition: transform 0.5s ease-in-out;
     padding: 15px;
-    /* border: 1px solid red; */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* border: 1px solid blue; */
+    scrollbar-width: thin;
+    scrollbar-color: #896646;
 }
-.mainCard .card {
+
+.mainCard .card, .mainCard1 .card1, .mainCard2 .card2 {
     height: 300px;
     padding: 8px;
     /* border: 1px solid; */
     border-radius: 8px;
 }
-.prev-btn, .next-btn {
+.prev-btn, .next-btn, .prev-btn1,
+.next-btn1, .prev-btn2,
+.next-btn2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -308,28 +287,32 @@
     z-index: 1;
     font-size: 20px;
 }
-.prev-btn {
+.prev-btn, .prev-btn1, .prev-btn2 {
     left: 10px;
 }
-.next-btn {
+.next-btn, .next-btn1,
+.next-btn2 {
     right: 10px;
 }
-.prev-btn:hover, .next-btn:hover {
+.prev-btn:hover,.prev-btn1:hover,
+.prev-btn2:hover .next-btn:hover, .next-btn1:hover,
+.next-btn2:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.mainCard .card:hover {
+.mainCard .card:hover, .mainCard1 .card1:hover, .mainCard2 .card2:hover {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.mainCard .card img {
+.mainCard .card img, .mainCard1 .card1 img, .mainCard2 .card2 img {
     width: 180px;
     border-radius: 8px;
     margin-bottom: 12px;
 }
 
-.mainCard .card h4,
-p {
+.mainCard h4, .mainCard p, .mainCard1 h4,
+.mainCard1 p, .mainCard2 h4,
+.mainCard2 p {
     margin-top: 8px;
 }
 
@@ -416,6 +399,7 @@ p {
 .customerService a:hover,
 .contactUs a:hover, .terms p:hover {
     border-bottom: 1px solid #896646;
+    width: fit-content;
 }
 .quickHelpBtn, .callUsBtn {
     width: 170px;
