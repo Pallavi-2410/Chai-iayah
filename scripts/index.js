@@ -13,7 +13,7 @@ document.querySelectorAll('.submenu a').forEach(item => {
 
         // Redirect to the next page
         window.location.href = 'secondPage.html';
-        console.log(selectedItem)
+        // console.log(selectedItem)
     });
 });
 
