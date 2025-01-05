@@ -26,9 +26,9 @@ signup.addEventListener('click', (event) => {
     window.location.href = 'signUp.html';
 })
 
-// function for Index images
 
-document.querySelectorAll('.mainCard img').forEach(item => {
+// function for Index images 
+document.querySelectorAll('.mainCard img,.mainCard1 img, .mainCard2 img').forEach(item => {
     item.addEventListener('click', (event) => {
         event.preventDefault();
         // Get item details
@@ -46,8 +46,6 @@ document.querySelectorAll('.mainCard img').forEach(item => {
 });
 
 
-
-
 // signIn Update when user loggenIn
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -63,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <span>Hello, ${loggedInUser.email.split('@')[0]}</span>
             <ul class="submenu">
                 <li><a href="#">My Account</a></li>
-                <li><a href="#">My Orders</a></li>
+                <li><a href="./cart.html">My Orders</a></li>
                 <li><a href="#">List</a></li>
                 <li><a href="#">Review My Purchase</a></li>
                 <li><a href="#">Recently Viewed</a></li>
