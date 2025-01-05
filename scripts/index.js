@@ -1,3 +1,5 @@
+// function for menu
+
 document.querySelectorAll('.submenu a').forEach(item => {
     item.addEventListener('click', (event) => {
         event.preventDefault();
@@ -11,9 +13,11 @@ document.querySelectorAll('.submenu a').forEach(item => {
 
         // Redirect to the next page
         window.location.href = 'secondPage.html';
+        console.log(selectedItem)
     });
 });
 
+// function for signUp button
 
 let signup = document.querySelector("#signUp");
 signup.addEventListener('click', (event) => {
@@ -21,8 +25,9 @@ signup.addEventListener('click', (event) => {
     window.location.href = 'signUp.html';
 })
 
+// function for Index images
 
-document.querySelectorAll('#mainCard img').forEach(item => {
+document.querySelectorAll('.mainCard img').forEach(item => {
     item.addEventListener('click', (event) => {
         event.preventDefault();
         // Get item details
@@ -37,3 +42,4 @@ document.querySelectorAll('#mainCard img').forEach(item => {
         window.location.href = 'secondPage.html';
     });
 });
+

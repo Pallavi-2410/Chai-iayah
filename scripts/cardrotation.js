@@ -1,4 +1,4 @@
-const track = document.querySelector('#mainCard');
+const track = document.querySelector('.mainCard');
 const prevButton = document.querySelector('.prev-btn');
 const nextButton = document.querySelector('.next-btn');
 const items = document.querySelectorAll('.card');
@@ -12,14 +12,16 @@ function updateCarousel() {
 }
 
 nextButton.addEventListener('click', () => {
-    if (currentIndex < items.length - 1) {
+    if (currentIndex < 2) {
         currentIndex++;
         updateCarousel();
     }
+    console.log(currentIndex, items.length)
 });
 
+
 prevButton.addEventListener('click', () => {
-    if (currentIndex < items.length - 1) {
+    if (currentIndex > 0) {
         currentIndex--;
         updateCarousel();
     }
