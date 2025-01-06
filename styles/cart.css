@@ -23,8 +23,8 @@ main {
 .cart-item {    
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 40px;
-    justify-content: space-around;
+    /* gap: 40px; */
+    justify-content: space-between;
     align-items: center;
     margin: 10px 0;
     padding: 15px;
