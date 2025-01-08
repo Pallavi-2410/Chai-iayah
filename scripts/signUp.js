@@ -48,3 +48,11 @@ loginredirect.addEventListener('click', (event) => {
 event.preventDefault();
     window.location.href = 'logIn.html';
 })
+
+// for checkBox
+
+document.querySelector('.showPassword').addEventListener('change', function () {
+    const passwordField = document.getElementById('password');
+    passwordField.type = this.checked ? 'text' : 'password';
+});
+
