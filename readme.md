@@ -10,6 +10,7 @@ Find your love for food and discover the essence of India’s chai heritage, bre
 1. HTML
 2. CSS
 3. Java Script
+4. Photoshop
 
 ## 🌐 Socials:
 Pallavi Patidar - https://www.linkedin.com/in/pallavi-patidar-8466a7273/
