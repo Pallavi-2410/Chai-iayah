@@ -1,131 +1,94 @@
-// // Initialize products and save to localStorage
-// // const products = [
-// //     { id: 1, name: "Adrak vali Chai", price: 20, image },
-// //     { id: 2, name: "Kashmiri Kahwa", price: 50 },
-// //     { id: 3, name: "Irani Chai", price: 30 },
-// //     { id: 4, name: "Green Tea", price: 40 },
-// //     { id: 5, name: "Butterfly Pea Tea", price: 60 }
-// // ];
-
-// // Save products to localStorage if not already present
-// if (!localStorage.getItem("products")) {
-//     localStorage.setItem("products", JSON.stringify(products));
-// }
-
-// // Search function
-// function performSearch(query) {
-//     const resultsContainer = document.getElementById("results");
-//     resultsContainer.innerHTML = ""; // Clear previous results
-
-//     // Retrieve products from localStorage
-//     const storedProducts = JSON.parse(localStorage.getItem("products")) || [];
-
-//     if (query) {
-//         // Filter products based on query
-//         const results = storedProducts.filter((product) =>
-//             product.name.toLowerCase().includes(query.toLowerCase())
-//         );
-
-//         if (results.length > 0) {
-//             // Display results
-//             results.forEach((product) => {
-//                 const resultItem = document.createElement("div");
-//                 resultItem.className = "result-item";
-//                 resultItem.textContent = `${product.name} - ₹${product.price}`;
-
-//                 // Add click event to redirect to a product page
-//                 resultItem.addEventListener("click", () => {
-//                     // Save the clicked product to localStorage
-//                     localStorage.setItem("selectedItem", JSON.stringify(product));
-//                     localStorage.setItem("selectedProduct", JSON.stringify(product));
-
-
-//                     // Redirect to the product page
-//                     window.location.href = "./secondPage.html"; // Replace with your product page URL
-//                 });
-
-//                 resultsContainer.appendChild(resultItem);
-//             });
-//         } else {
-//             resultsContainer.textContent = "No results found.";
-//         }
-//     }
-// }
-
-// // Event listener for search input
-// document.getElementById("searchInput").addEventListener("input", (event) => {
-//     const query = event.target.value.trim();
-//     performSearch(query);
-// });
-
-
-
-
-// Initialize products and save to localStorage
 const products = [
-    { id: 1, name: "Adrak vali Chai", price: 20, image },
-    { id: 2, name: "Kashmiri Kahwa", price: 50 },
-    { id: 3, name: "Irani Chai", price: 30 },
-    { id: 4, name: "Green Tea", price: 40 },
-    { id: 5, name: "Butterfly Pea Tea", price: 60 }
+    { name: "Adrak Vali Chai", price: "50", image: "./Image_files/Tea/Ginger-Cinnamon.jpg" },
+    { name: "Kashmiri Kahwa", price: "45", image: "./Image_files/Tea/Kashmiri_kahwa.jpg" },
+    { name: "Irani Chai", price: "55", image: "./Image_files/Tea/Irani_tea.jpg" },
+    { name: "Green Tea", price: "40", image: "./Image_files/Tea/Green_tea.jpg" },
+    { name: "Butterfly Pea Chai", price: "70", image: "./Image_files/Tea/ButterFly_pea_tea.jpg" },
+    { name: "Chai - Makhan maar ke", price: "50", image: "./Image_files/Tea/Butter_tea1.jpg" },
+    { name: "Kesar Chai", price: "80", image: "./Image_files/Tea/Kesar_tea.jpg" },
+    { name: "Tulsi Chai", price: "40", image: "./Image_files/Tea/Tulsi_tea.jpg" },
+    { name: "Americano", price: "80", image: "./Image_files/Coffee/Americano_coffee.jpg" },
+    { name: "Iced Coffee", price: "70", image: "./Image_files/Coffee/Iced Coffee.jpg" },
+    { name: "Caffe Macchiato", price: "90", image: "./Image_files/Coffee/Caffe Macchiato .jpg" },
+    { name: "Caffe Mocha", price: "120", image: "./Image_files/Coffee/Caffe mocha.jpg" },
+    { name: "Cortado", price: "150", image: "./Image_files/Coffee/Cortado1.jpg" },
+    { name: "Frappe", price: "100", image: "./Image_files/Coffee/Frappe.jpg" },
+    { name: "Espresso", price: "100", image: "./Image_files/Coffee/Espresso.jpg" },
+    { name: "Latte", price: "100", image: "./Image_files/Coffee/Latte.jpg" },
+    { name: "Poha", price: "40", image: "./Image_files/Nashta/Poha.jpg" },
+    { name: "Aalu Paratha", price: "20", image: "./Image_files/Nashta/Aalu Paratha.jpg" },
+    { name: "Dahi Kachori", price: "60", image: "./Image_files/Nashta/DahiKachori.jpg" },
+    { name: "Dosa", price: "30", image: "./Image_files/Nashta/Dosa.jpg" },
+    { name: "Idli", price: "10", image: "./Image_files/Nashta/Rawa Idli.jpg" },
+    { name: "Sabudana Khichdi", price: "35", image: "./Image_files/Nashta/Sabudana Khichdi.jpg" },
+    { name: "Samosa", price: "12", image: "./Image_files/Nashta/Samosa.jpg" },
 ];
 
-// Load products from localStorage
-function getProducts() {
-    // Parse stored products from localStorage
-    const products = JSON.parse(localStorage.getItem('products')) || [];
+const productList = document.getElementById("productList");
+const searchInput = document.getElementById("searchInput");
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const selectedItem = JSON.parse(localStorage.getItem('selectedItem'));
+// Function to render products
+function renderProducts(filteredProducts) {
+    productList.innerHTML = "";
+    filteredProducts.forEach(product => {
+        const productDiv = document.createElement("div");
+        productDiv.className = "product";
+        productDiv.innerHTML = `
+            <h3>${product.name}</h3>
+        `;
+        productList.appendChild(productDiv);
+    });
+}
 
-        // Add selectedItem to products if it exists
-        // const selectedItem = JSON.parse(localStorage.getItem('selectedItem'));
-        if (selectedItem) {
-            products.push(selectedItem); // Add dynamically selected item
-        }
 
-        return products;
-    }
-)}
+// Search functionality
+searchInput.addEventListener("input", (event) => {
+    const query = event.target.value.toLowerCase();
+    if (query === "") {
+        productList.innerHTML = "";
+        productList.style.display = "none";
+    } else {
+        const filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(query)
+        );
+        renderProducts(filteredProducts);
+        productList.style.display = "block";
 
-// Perform search on products
-function performSearch(query) {
-            const products = getProducts(); // Fetch all products including selectedItem
-            const resultsContainer = document.querySelector("#results");
-            resultsContainer.innerHTML = ""; // Clear previous results
+        // function for search Input
 
-            if (query) {
-                // Filter products based on query
-                const results = products.filter(product =>
-                    product.name.toLowerCase().includes(query.toLowerCase())
-                );
+        document.querySelectorAll('.product').forEach(item => {
+            item.addEventListener('click', () => {
+                // Get product details
+                const name = item.getAttribute('data-name');
+                const price = item.getAttribute('data-price');
+                const image = item.getAttribute('data-image');
 
-                // Display results
-                if (results.length > 0) {
-                    results.forEach(product => {
-                        const li = document.createElement("li");
-                        li.textContent = product.name;
-                        li.style.cursor = "pointer";
+                // Store product details in localStorage
+                localStorage.setItem('selectedItem', JSON.stringify({ name, price, image }));
 
-                        // Redirect on click
-                        li.addEventListener("click", () => {
-                            // Store clicked product in localStorage
-                            localStorage.setItem('selectedProduct', JSON.stringify(product));
-
-                            // Redirect to product details page
-                            window.location.href = "./secondPage.html";
-                        });
-
-                        resultsContainer.appendChild(li);
-                    });
-                } else {
-                    resultsContainer.textContent = "No results found.";
-                }
-            }
-        }
-
-// Add event listener for search input
-document.querySelector("#searchInput").addEventListener("input", (event) => {
-            const query = event.target.value;
-            performSearch(query);
+                // Redirect to the next page
+                window.location.href = 'secondPage.html';
+            });
         });
+    }
+});
+
+// // Render Products Function (Updated)
+function renderProducts(filteredProducts) {
+    productList.innerHTML = "";
+    filteredProducts.forEach(product => {
+        const productDiv = document.createElement("div");
+        productDiv.className = "product";
+        productDiv.setAttribute("data-name", product.name);
+        productDiv.setAttribute("data-price", product.price);
+        productDiv.setAttribute("data-image", product.image);
+
+        productDiv.innerHTML = `        
+        <h3>${product.name}</h3>
+    `;
+        productList.appendChild(productDiv);
+    });
+}
+
+
+

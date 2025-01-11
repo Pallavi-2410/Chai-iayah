@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('item-detail').textContent = selectedItem.description;
     }
 
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     const addToCartbtn = document.querySelector("#add-to-cart");

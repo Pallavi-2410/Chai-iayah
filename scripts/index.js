@@ -14,8 +14,7 @@ document.querySelectorAll('.submenu a').forEach(item => {
         // Redirect to the next page
         window.location.href = 'secondPage.html';
         
-    });
-    
+    });    
 });
 
 // function for signUp button
@@ -42,7 +41,6 @@ document.querySelectorAll('.mainCard img,.mainCard1 img, .mainCard2 img').forEac
         // Redirect to the next page
         window.location.href = 'secondPage.html';
     });
-    
 });
 
 
