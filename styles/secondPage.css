@@ -54,3 +54,8 @@
 #item-detail {
     padding-bottom: 20px;
 }
+@media (max-width: 768px) {
+    #item-details {
+        flex-direction: column;
+    }
+}
