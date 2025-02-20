@@ -530,6 +530,12 @@
         justify-content: center;
         margin-bottom: 10px;
     }
+    #user-menu span{
+        display: block;
+        width: 70px;
+        word-wrap: break-word;
+        text-align: center;
+    }
 
     .userCart {
         flex-direction: column;
@@ -593,13 +599,18 @@
     #topFooter h2 {
         padding: 10px;
         margin: auto;
+        font-size: 18px;
     }
     .aboutUs a,
     .customerService a {
         display: none;
         transition: all 0.3s ease;
+        font-size: 12px;
     }
 
+    .contactUs {
+        font-size: 12px;
+    }
     .aboutUs:hover a,
     .customerService:hover a {
         display: block;
@@ -619,8 +630,9 @@
         margin: auto;
         text-align: center;
         padding: 15px;
+        font-size: 10px;
     }
     footer p, .atTheRate {
-        font-size: smaller;
+        font-size: 10px;
     }
 }
